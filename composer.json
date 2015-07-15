@@ -22,7 +22,9 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "^2.2",
         "knpuniversity/guard-bundle": "~0.1@dev",
-        "guzzlehttp/guzzle": "~6.0"
+        "guzzlehttp/guzzle": "~6.0",
+        "league/oauth2-client": "~1.0@dev",
+        "league/oauth2-facebook": "~0.0.9"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
