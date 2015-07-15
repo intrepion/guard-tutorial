@@ -11,3 +11,11 @@ services:
     app.api_token_authenticator:
         class: AppBundle\Security\ApiTokenAuthenticator
         arguments: ["@doctrine.orm.entity_manager"]
+
+    app.facebook_authenticator:
+        class: AppBundle\Security\FacebookAuthenticator
+        arguments:
+            - @doctrine.orm.entity_manager
+            - %facebook_app_id%
+            - %facebook_app_secret%
+            - @router
