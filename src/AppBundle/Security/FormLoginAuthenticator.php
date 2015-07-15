@@ -3,12 +3,20 @@
 namespace AppBundle\Security;
 
 use KnpU\Guard\Authenticator\AbstractFormLoginAuthenticator;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 class FormLoginAuthenticator extends AbstractFormLoginAuthenticator
 {
+    private $container;
+
+    public function __construct(ContainerInterface $container)
+    {
+        $this->container = $container;
+    }
+
     public function getCredentials(Request $request)
     {
         // TODO: Implement getCredentials() method.
